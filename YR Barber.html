@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YR Barber Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('./Images/CarameloBN.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 25px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        }
+        input[type="text"],
+        input[type="cel"],
+        input[type="date"],
+        input[type="time"],
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            font-size: 16px;
+            background: rgba(0,0,0,0.2);
+            color: #fff;
+        }
+        input[type="submit"] {
+            background-color: #81D4FA;
+            color: #222;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #4FC3F7;
+        }
+    </style>
+</head>
+<body>
+    <div style="width:100vw; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+        <!-- Título principal -->
+        <div style="
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 32px;
+            margin-bottom: 8px;
+        ">
+            <h1 style="
+                font-family: 'Montserrat', Arial, sans-serif;
+                font-size: 3.2rem;
+                letter-spacing: 0.12em;
+                color: #0776cb;
+                text-shadow: 0 4px 24px rgb(255, 255, 255), 0 1px 0 #92b2b737;
+                background: linear-gradient(90deg, #e7f0effa 40%, #b4bdbf78 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-weight: 900;
+                margin: 0;
+                padding: 0 12px;
+                border-radius: 12px;
+            ">
+                YR Barber 
+            </h1>
+        </div>
+
+        <!-- 1. Agendar Citas -->
+        <div class="container" style="margin-top: 40px;">
+            <h1>Agendar Cita</h1>
+            <form action="https://formsubmit.co/yanezcastanedarodrigo@gmail.com" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="text" id="celular" name="Celular" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="Correo" required style="background: rgba(0,0,0,0.2); color: #fff; border: 1px solid #fff; border-radius: 4px; font-size: 16px; width: calc(100% - 20px); padding: 10px;">
+                </div>
+                <div class="form-group">
+                    <label for="servicio">Servicio:</label>
+                    <select id="servicio" name="Servicio" required>
+                        <option value="">Seleccione un servicio</option>
+                        <option value="Corte de Cabello">Corte de Cabello</option>
+                        <option value="Arreglo de Barba">Arreglo de Barba</option>
+                        <option value="Corte + Arreglo de Barba">Corte + Arreglo de Barba</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="Fecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="Hora" required>
+                </div>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="submit" value="Agendar Cita">
+            </form>
+        </div>
+
+        <!-- 2. Mapa -->
+        <div class="mapa-contenedor" style="max-width:600px; width:100%; margin:48px auto 0 auto; text-align:center;">
+            <div style="color:#fff; font-size:18px; font-weight:bold; margin-bottom:12px; text-shadow:0 1px 6px rgba(0,0,0,0.7);">
+                Ubicación: Calle Jalisco 223, Chalma de Guadalupe, Gustavo A. Madero, 07210 Ciudad de México, CDMX
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.7766873945807!2d-99.15290512661623!3d19.551198636886262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f7a1ef8f5b93%3A0x5fde91d8c4ae2104!2sC.%20Jalisco%20223%2C%20Chalma%20de%20Guadalupe%2C%20Gustavo%20A.%20Madero%2C%2007210%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1752618330892!5m2!1ses-419!2smx" width="100%" height="350" style="border:0; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.3); display: block; max-width: 600px; margin: 0 auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- 3. Contacto -->
+        <div style="max-width: 500px; width:100%; margin: 48px auto 48px auto; padding: 24px 20px 20px 20px; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.2); text-align:center;">
+            <div style="color:#fff; font-size:22px; font-weight:bold; text-shadow:0 1px 6px rgba(0,0,0,0.7); margin-bottom: 12px;">Contacto</div>
+            <div style="font-size:18px; font-weight:normal; color:#81D4FA; margin-bottom: 6px;">
+                Facebook: <a href="https://www.facebook.com/yanez.rodrigo.2025" target="_blank" style="color:#81D4FA; text-decoration:underline;">Yañez Rodrigo</a>
+            </div>
+            <div style="font-size:18px; font-weight:normal; color:#58e37a;">
+                WhatsApp: <a href="https://wa.me/5215612922668" target="_blank" style="color:#58e37a; text-decoration:underline;">5612922668</a>
+            </div>
+        </div>
+
+        <!-- Horarios -->
+        <div style="max-width: 420px; width:90%; margin: 18px auto 0 auto; padding: 16px 20px; background: rgba(30,30,30,0.65); border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.18); color:#eee; font-size:15px; text-align:center; letter-spacing:0.5px;">
+            <div style="font-weight:bold; font-size:17px; margin-bottom:6px; color:#81D4FA;">Horarios</div>
+            <div>Lunes a Viernes: <span style="color:#fff;">10:00 am</span> | <span style="color:#fff;">10:00 pm</span></div>
+            <div>Sábado: <span style="color:#fff;">9:00 am</span> | <span style="color:#fff;">10:00 pm</span></div>
+            <div>Domingo: <span style="color:#fff;">12:00 pm</span> | <span style="color:#fff;">6:00 pm</span></div>
+            <div>Precio estimado: $150
+        </div>
+
+        <!-- Politica de privacidad y créditos debajo de contacto -->
+        <div style="max-width: 420px; width:90%; margin: 18px auto 0 auto; padding: 18px 22px; background: rgba(30,30,30,0.65); border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.18); color:#eee; font-size:14px; text-align:center; letter-spacing:0.5px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                <span style="text-decoration:underline; cursor:pointer;">Política de Privacidad</span>
+                <span>YR Barber 2025 © Todos los derechos reservados.</span>
+                <span>Creado por: Hassam Aguilera.</span>
+                <span>CDMX | Gustavo A. Madero | Zona Norte.</span>
+            </div>
+</body>
+</html>
